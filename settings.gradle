@@ -1,0 +1,9 @@
+// DO NOT CHANGE UNLESS YOU KNOW WHAT YOU ARE DOING
+// This will use the current working directory as the name of the project with
+// the only caveat that you must execute the Gradle script from the root of the
+// directory.
+rootProject.name = {
+    ext.path = new File(".").getCanonicalPath()
+    ext.parts = ext.path.split("/")
+    ext.parts[ext.parts.length - 1]
+}()
